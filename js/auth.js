@@ -21,11 +21,3 @@ firebase.auth().signInWithEmailAndPassword(email, password)
     var errorMessage = error.message;
   });
 
-var form = document.getElementById("signup-form");
-function handleForm(event) { event.preventDefault(); } 
-form.addEventListener('submit', handleForm);
-
-document.getElementById("signup").addEventListener("click", function() {
-  firebase.createUserWithEmailAndPassword(document.getElementById("user-email").value, document.getElementById("user-password").value);
-  console.log(document.getElementById("user-email").value, document.getElementById("user-password").value)
-});
