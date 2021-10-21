@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --font-family: 'Montserrat', sans-serif;
+  --magnolia: #EFECF5;
+  --maximum-yellow-red: #E6B95F;
+  --congo-pink: #F58E7F;
+  --russian-violet: #382363;
+  --lilac: #C496C5;
+  --lavender-blush: #FBE8EC;
+  --byzantine: #B72BA8;
+}
+
+body,
+html {
+  background-color: var(--magnolia);
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+}
+
+.signup {
+  color: var(--russian-violet);
+  padding: 1em;
+}
+
+.signup input {
+  background-color: var(--lavender-blush);
+  border: none;
+  border-radius: 0.1em;
+  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.18);
+}
+
+.signup input:focus {
+  outline: solid var(--russian-violet) 0.1em;
+}
+
+.signup .submit {
+  background-color: var(--byzantine);
+  color: var(--magnolia);
+  font-family: var(--font-family);
+}
