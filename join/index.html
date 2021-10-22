@@ -6,16 +6,24 @@
   <title>!ADO - SignUp</title>
 <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="alt-bg">
 
   <main class="join-main">
     <div>SVG placeholder</div>
-    <form>
+    <form class="join-form">
       <h1>Create Account</h1>
       <label for="email">Email</label><br>
       <input type="email" id="join-email" name="email"><br>
       <label for="password">Password</label><br>
-      <input type="password" id="join-password" name="password">
+      <input type="password" id="join-password" name="password"><br>
+      <label for="password">8+ characters with a mixture of upper case and lower case</label><br>
+      <div class="grid-of-2 join-btn-alt">
+        <p>
+          Already have an account?<br>
+          <a href="../">Sign In ></a>
+        </p>
+        <button id="join-btn" type="submit">Join</button>
+      </div>
     </form>
   </main>
 

@@ -2,41 +2,75 @@
 
 :root {
   --font-family: 'Montserrat', sans-serif;
-  --magnolia: #EFECF5;
-  --maximum-yellow-red: #E6B95F;
-  --congo-pink: #F58E7F;
-  --russian-violet: #382363;
-  --lilac: #C496C5;
-  --lavender-blush: #FBE8EC;
-  --byzantine: #B72BA8;
+  --white: #EDF7F3;
+  --off-white: #DEE8E4;
+  --ocean-green: #5FBB97;
+  --hookers-green: #527A70;
+  --liver-grey: #5A5A66;
+  --jet: #2A2B2E;
+  --main-bg: var(--white);
+  --alt-bg: var(--off-white);
+  --dark-bg: var(--jet);
+  --alt-dark-bg: var(--liver-grey);
+  --main-dark-text: var(--jet);
+  --alt-dark-text: var(--liver-grey);
+  --main-light-text: var(--white);
+  --alt-light-text: var(--off-white);
+  --light-accent: var(--ocean-green);
+  --dark-accent: var(--hookers-green);
 }
 
 body,
 html {
-  background-color: var(--magnolia);
+  background-color: var(--main-bg);
+  color: var(--main-dark-text);
   font-family: var(--font-family);
   margin: 0;
   padding: 0;
 }
 
-.signup {
-  color: var(--russian-violet);
-  padding: 1em;
+.alt-bg {
+  background-color: var(--alt-bg);
 }
 
-.signup input {
-  background-color: var(--lavender-blush);
+.join-main {
+  background-color: var(--main-bg);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 66rem;
+  height: 33rem;
+}
+
+.join-form {
+  margin: 2rem;
+}
+
+.join-form input {
+  background-color: var(--alt-bg);
   border: none;
-  border-radius: 0.1em;
-  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.18);
+  border-radius: 10px;
+  margin-bottom: 1em;
+  padding: 1em;
+  width: 100%;
 }
 
-.signup input:focus {
-  outline: solid var(--russian-violet) 0.1em;
+.join-btn-alt a {
+  color: var(--dark-accent);
+  text-decoration: none;
 }
 
-.signup .submit {
-  background-color: var(--byzantine);
-  color: var(--magnolia);
+#join-btn {
+  background-color: var(--dark-accent);
+  border: none;
+  border-radius: 10px;
+  color: var(--main-light-text);
   font-family: var(--font-family);
+  font-weight: bold;
+}
+
+/* General uses */
+
+.grid-of-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
