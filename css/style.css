@@ -43,6 +43,7 @@ html {
 
 .join-form {
   margin: 2rem;
+  border: 5px solid;
 }
 
 .join-form input {
@@ -54,13 +55,17 @@ html {
   width: 100%;
 }
 
+.join-form input:focus {
+  outline: none;
+}
+
 .join-btn-alt a {
-  color: var(--dark-accent);
+  color: var(--light-accent);
   text-decoration: none;
 }
 
 #join-btn {
-  background-color: var(--dark-accent);
+  background-color: var(--light-accent);
   border: none;
   border-radius: 10px;
   color: var(--main-light-text);
