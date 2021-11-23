@@ -48,6 +48,7 @@ document.getElementById('newtask-btn').addEventListener('click', (e) => {
 })
 
 function UI(say, id){
+    if (say === null) { return }
     var node = document.createElement('li');
     node.setAttribute("id", id);
     node.setAttribute("onclick", "deleteTask(this.id)");
@@ -59,7 +60,7 @@ function UI(say, id){
 // https://stackoverflow.com/questions/49977624/get-clicked-elements-id-and-include-it-in-a-function-with-pure-js
 
 function deleteTask(e) {
-    user.get('task').unset(e);
+    user.get('task').get(e).put(null);
 }
 
 gun.on('auth', function(){
