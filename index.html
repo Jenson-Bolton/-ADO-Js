@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>!ADO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>!ADO</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  
-  <a href="./join">SignUp</a>
-  <a href="./starter">lesson starter</a>
 
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-  <script src="https://unpkg.com/@supabase/supabase-js"></script>
-  <script src="./js/firebase.js"></script>
+    <form id="entry-form">
+        <label for="username">Username</label><br>
+        <input type="text" name="username" id="username"><br>
+        <label for="password">Password</label><br>
+        <input type="password" name="password" id="password"><br>
+        <p id="err"></p>
+        <button type="submit" id="sign-in">Sign In</button>
+        <button id="register">Register</button>
+    </form>
+
+    <form id="settings">
+        <label for="currentpass">Current Password</label><br>
+        <input type="password" name="currentpass" id="currentpass"><br>
+        <label for="newpass">New Password</label><br>
+        <input type="password" name="newpass" id="newpass"><br>
+        <p id="reseterr"></p>
+        <button type="submit" id="resetpass">Submit</button>
+    </form>
+
+    <div id="workspace">
+        <h1>!ADO</h1>
+        <ul id="to-do"></ul>
+        <form>
+            <input type="text" name="new-task" id="newtask">
+            <button type="submit" id="newtask-btn">New</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/lib/unset.js"></script>
+    <!-- script src="https://cdn.jsdelivr.net/npm/gun/lib/webrtc.js"></script -->
+    <script src="./js/script.js"></script>
 </body>
 </html>

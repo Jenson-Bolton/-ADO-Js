@@ -1,81 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-  --font-family: 'Montserrat', sans-serif;
-  --white: #EDF7F3;
-  --off-white: #DEE8E4;
-  --ocean-green: #5FBB97;
-  --hookers-green: #527A70;
-  --liver-grey: #5A5A66;
-  --jet: #2A2B2E;
-  --main-bg: var(--white);
-  --alt-bg: var(--off-white);
-  --dark-bg: var(--jet);
-  --alt-dark-bg: var(--liver-grey);
-  --main-dark-text: var(--jet);
-  --alt-dark-text: var(--liver-grey);
-  --main-light-text: var(--white);
-  --alt-light-text: var(--off-white);
-  --light-accent: var(--ocean-green);
-  --dark-accent: var(--hookers-green);
+    --font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
 body,
 html {
-  background-color: var(--main-bg);
-  color: var(--main-dark-text);
-  font-family: var(--font-family);
-  margin: 0;
-  padding: 0;
+    font-family: var(--font-family);
 }
 
-.alt-bg {
-  background-color: var(--alt-bg);
+#settings {
+    display: none;
 }
 
-.join-main {
-  background-color: var(--main-bg);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 66rem;
-  height: 33rem;
-}
-
-.join-form {
-  margin: 2rem;
-  border: 5px solid;
-}
-
-.join-form input {
-  background-color: var(--alt-bg);
-  border: none;
-  border-radius: 10px;
-  margin-bottom: 1em;
-  padding: 1em;
-  width: 100%;
-}
-
-.join-form input:focus {
-  outline: none;
-}
-
-.join-btn-alt a {
-  color: var(--light-accent);
-  text-decoration: none;
-}
-
-#join-btn {
-  background-color: var(--light-accent);
-  border: none;
-  border-radius: 10px;
-  color: var(--main-light-text);
-  font-family: var(--font-family);
-  font-weight: bold;
-}
-
-/* General uses */
-
-.grid-of-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+#workspace {
+    display: none;
 }
