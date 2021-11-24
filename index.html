@@ -18,7 +18,7 @@
         <button id="register">Register</button>
     </form>
 
-    <form id="settings">
+    <form id="change-password">
         <label for="currentpass">Current Password</label><br>
         <input type="password" name="currentpass" id="currentpass"><br>
         <label for="newpass">New Password</label><br>
@@ -28,9 +28,9 @@
     </form>
 
     <div id="workspace">
-        <h1>!ADO</h1>
+        <header><h1>!ADO</h1></header>
         <ul id="to-do"></ul>
-        <form>
+        <form autocomplete="off" method="post">
             <input type="text" name="new-task" id="newtask">
             <button type="submit" id="newtask-btn">New</button>
         </form>

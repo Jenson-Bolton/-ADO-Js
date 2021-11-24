@@ -2,15 +2,100 @@
 
 :root {
     --font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    --bg-1: #2e3440;
+    --bg-2: #3b4252;
+    --bg-3: #434c5e;
+    --bg-4: #4c566a;
+    --input-bg-1: #d8dee9;
+    --input-bg-2: #eceff4;
+    --text-1: #eceff4;
+    --text-2: #2e3440;
 }
 
 body,
 html {
+    background-color: var(--bg-1);
+    color: var(--text-1);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: var(--input-bg-1);
+    border: none;
+    border-radius: 0.8rem;
+    color: var(--text-2);
+    padding: 1em;
+    transition: all .15s ease-in;
+}
+
+button:hover {
+    background-color: var(--input-bg-2);
+    cursor: pointer;
+}
+
+input {
+    background-color: var(--input-bg-1);
+    border: none;
+    border-radius: 0.8rem;
+    padding: 1em;
+    color: var(--text-2);
+    transition: all .15s ease-in;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+    background-color: var(--input-bg-2);
+}
+
+input:hover {
+    background-color: var(--input-bg-2);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 100px var(--input-bg-1) inset !important;
+}
+
+input:-webkit-autofill:hover {
+    -webkit-box-shadow: 0 0 0 100px var(--input-bg-2) inset !important;
+}
+
+#change-password {
+    display: none;
+}
+
+#entry-form {
+    background-color: var(--bg-2);
+    border-radius: 2rem;
+    box-shadow: 0 3px 6px #00000029;
+    color: var(--text-1);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.5rem;
+    padding: 2rem;
+    position: absolute;
+    height: 30rem;
+    width: 30rem;
+    top: calc(50vh - 15rem);
+    left: calc(50vw - 15rem);
+}
+
+#entry-form > * {
+    grid-column: span 2 / auto;
     font-family: var(--font-family);
 }
 
-#settings {
-    display: none;
+#entry-form button {
+    grid-column: span 1 / auto;
+}
+
+#entry-form p {
+    margin: 0;
+    padding: 0;
 }
 
 #workspace {

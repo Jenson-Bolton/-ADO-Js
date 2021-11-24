@@ -43,7 +43,7 @@ document.getElementById('resetpass').addEventListener('click', (e) => {
 document.getElementById('newtask-btn').addEventListener('click', (e) => {
     e.preventDefault();
     if (!user.is) { return }
-    user.get('task').set(newtask.value);
+    user.get('tasks').set(newtask.value);
     newtask.value = "";
 })
 
@@ -60,11 +60,12 @@ function UI(say, id){
 // https://stackoverflow.com/questions/49977624/get-clicked-elements-id-and-include-it-in-a-function-with-pure-js
 
 function deleteTask(e) {
-    user.get('task').get(e).put(null);
+    user.get('tasks').get(e).put(null);
+    todo.removeChild(document.getElementById(e));
 }
 
 gun.on('auth', function(){
     document.getElementById('entry-form').style.display = "none";
     document.getElementById('workspace').style.display = "block";
-    user.get('task').map().once(UI);
+    user.get('tasks').map().once(UI);
 });
